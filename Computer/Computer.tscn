@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://bsbe8cath07mp"]
+
+[ext_resource type="Script" path="res://Computer/Computer.gd" id="1_b4ier"]
+[ext_resource type="Texture2D" uid="uid://c0qd5rslxw1um" path="res://assets/paddle-red.png" id="1_pagep"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_nugbx"]
+height = 96.0
+
+[node name="Computer" type="CharacterBody2D"]
+position = Vector2(1180, 360)
+script = ExtResource("1_b4ier")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+rotation = 1.5708
+texture = ExtResource("1_pagep")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_nugbx")
